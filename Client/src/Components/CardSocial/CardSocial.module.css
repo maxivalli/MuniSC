@@ -1,0 +1,22 @@
+.container {
+  justify-self: center;
+  width: 150px;
+  height: 30px;
+  display: flex;
+}
+
+.container p {
+  margin: 0;
+  align-self: center;
+  color: whitesmoke !important;
+  font-size: 14px;
+}
+
+.container img {
+  justify-self: center;
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  transition: 200ms;
+}

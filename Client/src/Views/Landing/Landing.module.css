@@ -1,0 +1,124 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 100px;
+  color: whitesmoke;
+  font-size: 20px;
+  font-style: italic;
+  animation: texto 1s ease-in-out;
+  text-shadow: 0px 1px 5px black;
+}
+
+.container button {
+  background-color: transparent;
+  color: rgb(30, 30, 39);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 180px;
+  animation: button 2s ease;
+  transition: 300ms;
+}
+
+.container button:hover {
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: zoom 15s ease;
+}
+
+@keyframes zoom {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 120%;
+    height: 120%;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  animation: intro 1s ease-in-out;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@keyframes intro {
+  0% {
+    width: 75px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+
+@keyframes texto {
+  0% {
+    margin-left: -150px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes button {
+  0% {
+    filter: opacity(0);
+  }
+  50% {
+    filter: opacity(0);
+  }
+  100% {
+    filter: opacity(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 14px;
+    text-wrap: nowrap;
+    margin-top: 70px;
+  }
+
+  .logo {
+    width: 100px;
+    animation: intro1 1s ease-in-out;
+  }
+
+  @keyframes intro1 {
+    0% {
+      width: 50px;
+    }
+    100% {
+      width: 100px;
+    }
+  }
+}

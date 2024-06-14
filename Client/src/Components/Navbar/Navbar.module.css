@@ -1,0 +1,167 @@
+.container {
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background-color: #293768;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  height: 60px;
+  justify-self: left;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 45px;
+  margin: 5px;
+  margin-left: 10px;
+  object-fit: cover;
+}
+
+.logo p {
+  align-self: center;
+  color: whitesmoke;
+  margin: 0;
+  font-style: italic;
+}
+
+.buttons {
+  position: absolute;
+  top: 0;
+  display: flex;
+  height: 60px;
+  justify-self: right;
+  gap: 20px;
+  margin-right: 10px;
+}
+
+.buttons a {
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: grid;
+  width: 60px;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: opacity(0.8);
+}
+
+.button img {
+  justify-self: center;
+  align-self: flex-end;
+  filter: opacity(0.4);
+}
+
+.button p {
+  color: whitesmoke;
+  margin: 0;
+  font-size: 10px;
+}
+
+.menu {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 300px;
+  height: 360px;
+  background-color: #293768;
+  z-index: 10;
+  align-items: flex-start;
+  border-radius: 0px 0px 0px 10px;
+}
+
+.menu button {
+  background-color: transparent;
+  color: white;
+  width: 300px;
+  height: 60px;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+}
+
+.menu button:focus {
+  width: auto;
+  height: 60px;
+}
+
+.lastButton {
+  background-color: transparent;
+  color: white;
+  width: 300px;
+  height: 60px;
+  border-bottom: none !important;
+}
+
+.lastButton:hover {
+  border-radius: 0px 0px 0px 10px;
+}
+
+.back {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: grid;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    background-color: #293768;
+    z-index: 10;
+  }
+
+  .buttons {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    gap: 2px;
+    justify-self: center;
+  }
+
+  .button {
+    width: 50px;
+  }
+
+  .button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo p {
+    display: none;
+  }
+
+  .menu {
+    top: auto;
+    bottom: 60px;
+    border-radius: 10px 0px 0px 0px;
+  }
+
+  .menu button:first-child {
+    border-radius: 10px 0px 0px 0px;
+  }
+
+  .lastButton {
+    border-radius: 0 !important;
+  }
+}

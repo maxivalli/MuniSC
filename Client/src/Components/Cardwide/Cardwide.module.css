@@ -1,0 +1,58 @@
+.container {
+  position: relative;
+  display: grid;
+  width: 100vw;
+  height: 400px;
+  cursor: pointer;
+}
+
+.container img {
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(0.5) blur(1px);
+  transition: 300ms;
+  animation: zoom 5s ease infinite;
+}
+
+.container button {
+  position: absolute;
+}
+
+.container button:hover {
+  transform: scale(0.95);
+}
+
+.texto {
+  position: absolute;
+  padding: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.texto h2 {
+  margin: 0;
+  font-size: 80px;
+  transition: 300ms;
+  text-wrap: nowrap;
+  color: whitesmoke;
+}
+
+.texto p {
+  text-align: justify;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .container {
+    height: 200px;
+  }
+
+  .container img {
+    height: 200px;
+  }
+  .texto h2 {
+    font-size: 36px;
+  }
+}
